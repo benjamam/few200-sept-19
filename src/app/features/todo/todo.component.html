@@ -1,0 +1,5 @@
+<header class="page-header">
+  <h3>Your todo list</h3>
+</header>
+<app-entry (itemAdded)="addTodoItem($event)"></app-entry>
+<app-list [items]="todoList$ | async"></app-list>

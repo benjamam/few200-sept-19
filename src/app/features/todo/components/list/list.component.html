@@ -1,0 +1,16 @@
+<div class="alert alert-danger"
+     *ngIf="items?.length === 0">
+  Your list is empty!
+</div>
+<ul class="list-unstyled">
+  <li class="alert"
+      [ngClass]="{ 'alert-info' : !item.completed, 'alert-success' : item.completed}"
+      *ngFor="let item of items">
+    <span [ngClass]="{ 'done': item.completed }">{{ item.description }}</span>
+    <input type="button"
+           *ngIf="!item.completed"
+           (click)="markComplete(item)"
+           class="btn btn-sm btn-danger"
+           value="X">
+  </li>
+</ul>
