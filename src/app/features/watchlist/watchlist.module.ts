@@ -4,11 +4,12 @@ import { WatchlistComponent } from './watchlist.component';
 import { ListComponent } from './components/list/list.component';
 import { StoreModule } from '@ngrx/store';
 import { featureName, reducers } from './reducers';
+import { EntryComponent } from './components/entry/entry.component';
 
 
 
 @NgModule({
-  declarations: [WatchlistComponent, ListComponent],
+  declarations: [WatchlistComponent, ListComponent, EntryComponent],
   imports: [
     CommonModule,
     StoreModule.forFeature(featureName, reducers)
